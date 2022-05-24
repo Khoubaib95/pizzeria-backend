@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateRestaurantDto } from './dto/create-restaurant.dto';
 import { UpdateRestaurantDto } from './dto/update-restaurant.dto';
+import { data } from './data';
 
 @Injectable()
 export class RestaurantService {
@@ -9,7 +10,7 @@ export class RestaurantService {
   }
 
   findAll() {
-    return `This action returns all restaurant`;
+    return data;
   }
 
   findOne(id: number) {

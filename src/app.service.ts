@@ -1,8 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { getHello } from './@types';
+import { getEntryPointHello } from './app_constant/const';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!' + process.env.test;
+  getHello(): getHello {
+    return getEntryPointHello;
   }
 }
